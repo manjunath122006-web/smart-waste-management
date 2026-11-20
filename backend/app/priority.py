@@ -22,8 +22,16 @@ def calculate_priority_score(
     s_norm = max(1, min(5, severity_level)) / 5.0
 
     # 2. Waiting Time Factor (0.0 to 1.0)
-    now = datetime.utcnow()
-    hours_elapsed = max(0.0, (now - created_at).total_seconds() / 3600.0)
+    if created_at:
+        from datetime import timezone
+        if created_at.tzinfo is not None:
+            c_naive = created_at.astimezone(timezone.utc).replace(tzinfo=None)
+        else:
+            c_naive = created_at
+        now = datetime.utcnow()
+        hours_elapsed = max(0.0, (now - c_naive).total_seconds() / 3600.0)
+    else:
+        hours_elapsed = 0.0
     t_norm = min(1.0, hours_elapsed / 72.0)
 
     # 3. Hotspot Density Factor (0.0 to 1.0)
