@@ -13,7 +13,7 @@ class Settings(BaseModel):
         origin.strip() 
         for origin in os.getenv(
             "CORS_ORIGINS", 
-            "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173"
+            "http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173,https://smart-waste-management-32ebb.web.app,https://smart-waste-management-32ebb.firebaseapp.com"
         ).split(",") if origin.strip()
     ]
 
