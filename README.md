@@ -156,15 +156,7 @@ Open your browser at: **[http://localhost:5173](http://localhost:5173)**.
 2. Enter the generated Tracking ID (or use a seeded sample like `CMP-20261026-A101`).
 3. Observe the progress timeline (`Report Ingested` $\rightarrow$ `AI Verified` $\rightarrow$ `Route Assigned` $\rightarrow$ `Resolved`), photo preview, and priority badge.
 
-### 3. Municipal Operations Dashboard & Triage
-1. Navigate to **Admin Dashboard**.
-2. Click **Admin Login** in the navbar:
-   * **Email:** `admin@ecoroute.local`
-   * **Password:** `AdminSecurePass123!`
-3. Review the KPI cards: Total Complaints, Pending, Resolved, and Active Hotspot Zones.
-4. Review the high-density Hotspot Clusters (complaints within 250m proximity).
-5. Change a complaint status dropdown (e.g., `PENDING` $\rightarrow$ `ASSIGNED` or `RESOLVED`).
-6. Click the pencil icon next to an AI category to demonstrate the **Human-in-the-Loop Override** mechanism.
+
 
 ### 4. Collection Route Optimization (Google OR-Tools)
 1. In the Admin Dashboard or directly in the **Route Optimizer** tab:
